@@ -20,3 +20,10 @@
 ### 4. Mutlistage в Dockerfile'ах фронта и бэка
 ![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20201736.png)
 ![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20201811.png)
+
+### 5. Написал bash скрипт для сборки и развертывания 
+![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20215842.png)
+![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20220422.png)
+
+### 6. Cкрин рабочего варианта приложения
+![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20192725.png)
