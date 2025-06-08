@@ -16,3 +16,7 @@
 
 ### 3. Настроил grafana для просмотра логов
 ![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20192221.png)
+
+### 4. Mutlistage в Dockerfile'ах фронта и бэка
+![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20201736.png)
+![Screen](https://github.com/Krasekkech/devops/blob/finalTest/screenshots/Снимок%20экрана%202025-06-08%20201811.png)
