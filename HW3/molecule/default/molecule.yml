@@ -1,0 +1,16 @@
+---
+dependency:
+  name: galaxy
+
+driver:
+  name: vagrant
+
+platforms:
+  - name: localhost
+
+provisioner:
+  name: ansible
+  playbook: playbook.yml
+
+verifier:
+  name: ansible

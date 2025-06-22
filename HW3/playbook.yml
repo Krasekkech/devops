@@ -1,0 +1,37 @@
+- name: Configure remote server
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create user
+      user:
+        name: kaml
+        state: present
+        shell: /bin/bash
+
+    - name: Copy SSH public key
+      authorized_key:
+        user: "{{ kaml }}"
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+        state: present
+
+    - name: Disable password authentication
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+        state: present
+      notify: Restart SSH service
+
+    - name: Create directory in /opt/
+      file:
+        path: /opt/{{ directory }}
+        state: directory
+        owner: "{{ kaml }}"
+        group: "{{ kaml }}"
+        mode: '0755'
+
+  handlers:
+    - name: Restart SSH service
+      service:
+        name: sshd
+        state: restarted

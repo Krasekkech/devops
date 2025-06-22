@@ -1,0 +1,5 @@
+---
+# vars file for HW3
+user_name: kaml
+public_key_path: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+directory_name: directory

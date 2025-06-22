@@ -1,0 +1,27 @@
+
+---
+# tasks file for HW3
+
+- name: kaml
+  user:
+    name: "{{ kaml }}"
+    shell: /bin/bash
+
+- name: Copy SSH public key
+  authorized_key:
+    user: "{{ kaml }}"
+    key: {{ lookup('file', '~/.ssh/id_rsa.pub') }}
+
+- name: Disable password authentication
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication'
+    line: 'PasswordAuthentication no'
+  notify: Restart SSH service
+
+- name: Create directory in /opt/
+  file:
+    path: /opt/{{ directory }}
+    state: directory
+    owner: "{{ kaml }}"
+    group: "{{ kaml }}"
